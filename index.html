@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ming-Ju Kuo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+</script>
+<![endif]-->
+    <style>
+        #profile-cover {
+            height: 60%;
+        }
+
+        .socail-icon {
+            width: auto;
+        }
+
+        .timeline-item:nth-child(6) {
+            vertical-align: middle;
+            min-height: 200px;
+            border-right: 5px dashed #333;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K5ZTMW" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K5ZTMW');</script>
+    <!-- End Google Tag Manager -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ming</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="#bio">Biography</a>
+                    <a class="nav-link" href="#timeline">Timeline</a>
+                    <a class="nav-link" href="#publications">Publication</a>
+                    <a class="nav-link" href="#">Projects</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="profile-cover" class="cover shallow-bg img-responsive">
+
+        <div id="profile-namecard" class="profile-wrapper wrapper-light">
+            <div id="my-pic" class="profile-col profile-col-1">
+                <img id="profile-avatar" src="/images/profile.png" alt="Me" class="circle-img border-dark" />
+            </div>
+            <div id="my-contact" class="profile-col profile-col-2">
+                <div id="my-name" class="text-grey-dark">
+                    Ming-Ju(Ming) Kuo
+                </div>
+                <div id="my-title" class="text-grey">
+                    Software Development Engineer in Test [at] NZXT
+                </div>
+                <div id="my-email" class="text-grey-light">
+                    ming.kuo [at] nzxt.com
+                </div>
+                <div class="social-media">
+
+                    <a href="https://github.com/NTUEEboy" class="icon-button github">
+                        <i class="fa fa-github icon-github"></i>
+                        <span></span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/mingju-kuo/" class="icon-button linkedin">
+                        <i class="fa fa-linkedin icon-linkedin"></i>
+                        <span></span>
+                    </a>
+
+                </div>
+            </div>
+            <div id="my-desc" class="profile-col profile-col-2 hide">
+                <div id="my-desc-title">
+                    Just try Github.io
+                </div>
+                <div id="my-desc-content">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function deepFeature() {
+            $('#profile-avatar').attr('src', '/images/profile.png');
+            $('#profile-avatar').removeClass('border-dark');
+            $('#profile-avatar').addClass('border-bright');
+
+            $('#profile-cover').removeClass('shallow-bg');
+            $('#profile-cover').addClass('deep-bg');
+
+            $('#profile-namecard').removeClass('wrapper-light');
+            $('#profile-namecard').addClass('wrapper-dark');
+
+            $('#my-desc').removeClass('hide');
+            $('#my-contact').addClass('hide');
+            // console.log('Move in now...');
+        }
+
+        function shallowFeature() {
+            $('#profile-avatar').attr('src', '/images/profile.png');
+            $('#profile-avatar').removeClass('border-bright');
+            $('#profile-avatar').addClass('border-dark');
+
+            $('#profile-cover').removeClass('deep-bg');
+            $('#profile-cover').addClass('shallow-bg');
+
+            $('#profile-namecard').removeClass('wrapper-dark');
+            $('#profile-namecard').addClass('wrapper-light');
+
+            $('#my-contact').removeClass('hide');
+            $('#my-desc').addClass('hide');
+            // console.log('Move out now...');
+        }
+
+        $(function () {
+            $('#my-pic').hover(deepFeature, shallowFeature);
+        })
+
+    </script>
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div id="bio" class="bio">
+                <h1 class="md-heading text-center">
+                    <i class="fa fa-id-card" aria-hidden="true"></i>
+                    Biography
+                </h1>
+                <div class="bio-body">
+                    <p>
+                        <strong>Ming</strong> is a software quality assurance engineer at <a
+                            href="https://www.letsbld.com/">NZXT</a> with the background in
+                        bioengieering. He obtained his bachelor degree
+                        from <strong>National Taiwan University</strong> and master degree from <strong>Technical
+                            University of Dresden</strong>. During master study, he worked in the <strong>Computational
+                            Biology Lab (Cybernetics Group)</strong> with <a
+                            href="http://www.biotec.tu-dresden.de/research/cannistraci/">Carlo Vittorio Cannistraci</a>
+                        at <strong>BIOTEC TU Dresden</strong>.
+                        [<strong>
+                            <a href='/assets/resume.pdf'>Résumé</a>
+                        </strong>]
+                    </p>
+                </div>
+            </div>
+
+
+            <div id="timeline" class="timeline-brief">
+                <h1 class="md-heading text-center">
+                    <i class="fa fa-tasks" aria-hidden="true"></i>
+                    Timeline
+                </h1>
+
+                <div class="timeline-body">
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <img class="social-icon" src="/images/icon/NZXT.png">
+                            Dec 2020 -
+                        </div>
+                        <div class="timeline-title">
+                            Software QA Engineer @ NZXT
+                        </div>
+                        <div class="timeline-desc">
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" style="box-sizing: unset;">
+                        <div class="timeline-date">
+                            <img class="social-icon" src="/images/icon/NCTU.png">
+                            Apr 2020 - Aug 2020
+                        </div>
+                        <div class="timeline-title">
+                            Bioinformatician @ NCTU
+                        </div>
+                        <div class="timeline-desc">
+                        </div>
+
+                        <div class="timeline-host">
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <img class="social-icon" src="/images/icon/TUD.png">
+                            2016 - 2019
+                        </div>
+                        <div class="timeline-title">
+                            Master Student @ TU Dresden
+                        </div>
+                        <div class="timeline-desc">
+                            M.Sc. in Bioengineering
+                        </div>
+
+                        <div class="timeline-host">
+                            Supervisor: <a href='http://www.biotec.tu-dresden.de/research/cannistraci/'>Dr. Carlo
+                                Cannistraci</a>
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-item" style="box-sizing: unset">
+                        <div class="timeline-date">
+                            <img class="social-icon" src="/images/icon/NTU.png">
+                            2015 Summer
+                        </div>
+                        <div class="timeline-title">
+                            Intern @ Depatment of Life Science, NTU
+                        </div>
+                        <div class="timeline-desc">
+                        </div>
+
+                        <div class="timeline-host">
+                            Supervisor: <a
+                                href='http://homepage.ntu.edu.tw/~deptlifesci/faculty_ChauTiTing.html?lang=en'>Chau-Ti
+                                Ting</a>
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <img class="social-icon" src="/images/icon/AS.png">
+                            2012 Summer
+                        </div>
+                        <div class="timeline-title">
+                            Geophysics Intern @ Academia Sinica
+                        </div>
+                        <div class="timeline-desc">
+                        </div>
+
+                        <div class="timeline-host">
+                            Supervisor: <a href='https://www.earth.sinica.edu.tw/member/info/30?lang=en'>Dr. Wen-Tzong
+                                Liang</a>
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-item" style="box-sizing: unset">
+                        <div class="timeline-date">
+                            <img class="social-icon" src="/images/icon/NTU.png">
+                            2010 - 2015
+                        </div>
+                        <div class="timeline-title">
+                            Bachelor Student @ National Taiwan University
+                        </div>
+                        <div class="timeline-desc">
+                            B.Sc. in Life Science and Geosciences
+                        </div>
+
+                        <div class="timeline-host">
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-start" style="box-sizing: unset">
+                        <div class="timeline-date">
+                            1992
+                        </div>
+                        <div class="timeline-title">
+                            He was Born
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="publications" class="publications">
+            <h1 class="md-heading text-center">
+                <i class="fa fa-file" aria-hidden="true"></i>
+                Publication
+            </h1>
+
+            <div class="pub-list">
+
+
+                <div class="pub">
+                    <div class="pub-left">
+                        <img class="intro-img frame" src="/images/pub/psi.png" />
+                    </div>
+                    <div class="pub-right">
+                        <div class="title">
+                            Measuring group-separability in geometrical space for evaluation of pattern recognition and
+                            embedding algorithms
+                        </div>
+                        <div class="authors">
+
+
+                            A. Acevedo
+                            ,
+
+                            S. Ciucci
+                            ,
+                            <strong>
+                                MJ. Kuo
+                            </strong>
+                            ,
+                            C. Duran
+                            ,
+
+                            CV. Cannistraci
+
+
+                        </div>
+                        <div class="desc">
+                            <p>
+                                Evaluating data separation in a geometrical space is fundamental for pattern
+                                recognition. A plethora of dimensionality
+                                reduction (DR) algorithms have been developed in order to reveal the emergence of
+                                geometrical patterns in a low
+                                dimensional visible representation space, in which high-dimensional samples similarities
+                                are approximated by geometrical
+                                distances. However, statistical measures to evaluate directly in the low dimensional
+                                geometrical space the sample group
+                                separability attaiend by these DR algorithms are missing. Certainly, these separability
+                                measures could be used both to
+                                compare algorithms performance and to tune algorithms parameters. Here, we propose three
+                                statistical measures (named as
+                                PSI-ROC, PSI-PR, and PSI-P) that have origin from the Projection Separability (PS)
+                                rationale introduced in this study,
+                                which is expressly designed to assess group separability of data samples in a
+                                geometrical space. Traditional cluster
+                                validity indices (CVIs) might be applied in this context but they show limitations
+                                because they are not specifically
+                                tailored for DR. Our PS measures are compared to six baseline cluster validity indices,
+                                using five non-linear datasets
+                                and six different DR algorithms. The results provide clear evidence that
+                                statistical-based measures based on PS
+                                rationale are more accurate than CVIs and can be adopted to control the tuning of
+                                parameter-dependent DR algorithms.
+                            </p>
+                        </div>
+                        <div class="publish">
+                        </div>
+                        <div class="tags">
+
+                            [<a class="tag" href="https://arxiv.org/abs/1912.12418"> <strong>arXiv</strong> </a>]
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer class="site-footer">
+
+        <div class="wrapper">
+            <div class="footer-col-wrapper">
+                <div class="footer-col  footer-col-1">
+                    <ul class="contact-list">
+                        <li>Ming-Ju Kuo</li>
+                        <li><a href="mailto:">ming.kuo [at] nzxt.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col  footer-col-2">
+                </div>
+
+                <div class="footer-col  footer-col-3">
+                    <p class="text">This is an academic website for Ming-Ju Kuo to share his experiences, projects,
+                        publications. The website style comes from <a href="http://hexianghu.com/">Hexiang Hu</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="back-to-top">Top</div>
+
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            var offset = 220;
+            var duration = 500;
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > offset) {
+                    jQuery('.back-to-top').fadeIn(duration);
+                } else {
+                    jQuery('.back-to-top').fadeOut(duration);
+                }
+            });
+
+            jQuery('.back-to-top').click(function (event) {
+                event.preventDefault();
+                jQuery('html, body').animate({ scrollTop: 0 }, duration);
+                return false;
+            })
+        });
+    </script>
+</body>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-60071442-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+</html>
