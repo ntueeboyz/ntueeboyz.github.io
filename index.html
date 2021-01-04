@@ -28,10 +28,12 @@
             width: auto;
         }
 
-        .timeline-item:nth-child(6) {
-            vertical-align: middle;
-            min-height: 200px;
-            border-right: 5px dashed #333;
+        @media (min-width: 600px) {
+            .timeline-item:nth-child(6) {
+                vertical-align: middle;
+                min-height: 200px;
+                border-right: 5px dashed #333;
+            }
         }
     </style>
 
