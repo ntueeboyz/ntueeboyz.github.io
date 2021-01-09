@@ -7,18 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Ming-Ju Kuo</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
-        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/main.css">
-    <!--[if lt IE 9]>
-<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-</script>
-<![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
     <style>
         #profile-cover {
             height: auto;
@@ -28,7 +29,42 @@
             width: auto;
         }
 
+        .nvbr {
+            height: 10%;
+        }
+
+        .nvbr-lnk {
+            width: 270px;
+        }
+
+        .nvbr-title a {
+            width: 70px;
+            font-size: 1.2rem;
+            color: black;
+        }
+
+        .nvbr-lnk a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (min-width: 800px) {
+            #profile-cover {
+                height: 350px;
+            }
+
+            .timeline-item:nth-child(6) {
+                vertical-align: middle;
+                min-height: 200px;
+                border-right: 5px dashed #333;
+            }
+        }
+
         @media (min-width: 600px) {
+            #profile-cover {
+                height: 400px;
+            }
+
             .timeline-item:nth-child(6) {
                 vertical-align: middle;
                 min-height: 200px;
@@ -54,27 +90,23 @@
         })(window, document, 'script', 'dataLayer', 'GTM-K5ZTMW');</script>
     <!-- End Google Tag Manager -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Ming</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="#bio">Biography</a>
-                    <a class="nav-link" href="#timeline">Timeline</a>
-                    <a class="nav-link" href="#publications">Publication</a>
-                    <a class="nav-link" href="#">Projects</a>
-                </div>
+    <div class="nvbr d-flex align-items-center bg-dark">
+        <div class="container d-flex justify-content-between">
+            <div class="nvbr-title">
+                <a href="#" class="font-weight-bolder badge badge-light text-wrap">Ming</a>
+            </div>
+            <div class="nvbr-lnk row justify-content-between">
+                <a href="#bio">Bio</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#publications">Publication</a>
+                <a href="#">Projects</a>
             </div>
         </div>
-    </nav>
+    </div>
 
     <div id="profile-cover" class="cover shallow-bg img-responsive">
 
-        <div id="profile-namecard" class="profile-wrapper wrapper-light">
+        <div id="profile-namecard" class="profile-wrapper wrapper-light mb-2">
             <div id="my-pic" class="profile-col profile-col-1">
                 <img id="profile-avatar" src="/images/profile.png" alt="Me" class="circle-img border-dark" />
             </div>
@@ -102,51 +134,49 @@
 
                 </div>
             </div>
-            <div id="my-desc" class="profile-col profile-col-2 hide">
+            <!-- <div id="my-desc" class="profile-col profile-col-2 hide">
                 <div id="my-desc-title">
                     Just try Github.io
                 </div>
                 <div id="my-desc-content">
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <script type="text/javascript">
-        function deepFeature() {
-            $('#profile-avatar').attr('src', '/images/profile.png');
-            $('#profile-avatar').removeClass('border-dark');
-            $('#profile-avatar').addClass('border-bright');
+        // function deepFeature() {
+        //     $('#profile-avatar').attr('src', '/images/profile.png');
+        //     $('#profile-avatar').removeClass('border-dark');
+        //     $('#profile-avatar').addClass('border-bright');
 
-            $('#profile-cover').removeClass('shallow-bg');
-            $('#profile-cover').addClass('deep-bg');
+        //     $('#profile-cover').removeClass('shallow-bg');
+        //     $('#profile-cover').addClass('deep-bg');
 
-            $('#profile-namecard').removeClass('wrapper-light');
-            $('#profile-namecard').addClass('wrapper-dark');
+        //     $('#profile-namecard').removeClass('wrapper-light');
+        //     $('#profile-namecard').addClass('wrapper-dark');
 
-            $('#my-desc').removeClass('hide');
-            $('#my-contact').addClass('hide');
-            // console.log('Move in now...');
-        }
+        //     $('#my-desc').removeClass('hide');
+        //     $('#my-contact').addClass('hide');
+        // }
 
-        function shallowFeature() {
-            $('#profile-avatar').attr('src', '/images/profile.png');
-            $('#profile-avatar').removeClass('border-bright');
-            $('#profile-avatar').addClass('border-dark');
+        // function shallowFeature() {
+        //     $('#profile-avatar').attr('src', '/images/profile.png');
+        //     $('#profile-avatar').removeClass('border-bright');
+        //     $('#profile-avatar').addClass('border-dark');
 
-            $('#profile-cover').removeClass('deep-bg');
-            $('#profile-cover').addClass('shallow-bg');
+        //     $('#profile-cover').removeClass('deep-bg');
+        //     $('#profile-cover').addClass('shallow-bg');
 
-            $('#profile-namecard').removeClass('wrapper-dark');
-            $('#profile-namecard').addClass('wrapper-light');
+        //     $('#profile-namecard').removeClass('wrapper-dark');
+        //     $('#profile-namecard').addClass('wrapper-light');
 
-            $('#my-contact').removeClass('hide');
-            $('#my-desc').addClass('hide');
-            // console.log('Move out now...');
-        }
+        //     $('#my-contact').removeClass('hide');
+        //     $('#my-desc').addClass('hide');
+        // }
 
-        $(function () {
-            $('#my-pic').hover(deepFeature, shallowFeature);
-        })
+        // $(function () {
+        //     $('#my-pic').hover(deepFeature, shallowFeature);
+        // })
 
     </script>
 
