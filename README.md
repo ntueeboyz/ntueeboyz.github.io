@@ -1,2 +1,1 @@
-# NTUEEboy.github.io
-Personal Website
+Personal Website: try github.io
